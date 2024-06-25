@@ -13,7 +13,7 @@ import io.github.oliviercailloux.grade.GitFsGraderUsingLast;
 import io.github.oliviercailloux.grade.GradeAggregator;
 import io.github.oliviercailloux.grade.MarksTree;
 import io.github.oliviercailloux.grade.MavenCodeGrader;
-import io.github.oliviercailloux.grade.MavenCodeGrader.WarningsBehavior;
+import io.github.oliviercailloux.grade.MavenCodeHelper.WarningsBehavior;
 import io.github.oliviercailloux.grade.format.CsvGrades;
 import io.github.oliviercailloux.javagrade.JUnitHelper;
 import io.github.oliviercailloux.javagrade.bytecode.Instanciator;
