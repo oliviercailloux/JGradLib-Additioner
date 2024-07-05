@@ -1,40 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>io.github.oliviercailloux</groupId>
-		<artifactId>pom</artifactId>
-		<version>0.0.21</version>
-	</parent>
-	<groupId>io.github.oliviercailloux.grading</groupId>
-	<artifactId>additioner</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>io.github.oliviercailloux</groupId>
+    <artifactId>pom</artifactId>
+    <version>0.0.21</version>
+  </parent>
+  <groupId>io.github.oliviercailloux.grading</groupId>
+  <artifactId>additioner</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
 
-	<dependencies>
-		<dependency>
-			<groupId>io.github.oliviercailloux</groupId>
-			<artifactId>jaris</artifactId>
-			<version>0.0.31-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>io.github.oliviercailloux</groupId>
-			<artifactId>jgradlib</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+  <properties>
+    <exec.mainClass>io.github.oliviercailloux.javagrade.graders.Additioner</exec.mainClass>
+  </properties>
+  <profiles>
+    <profile>
+      <id>client</id>
+      <properties>
+        <exec.mainClass>io.github.oliviercailloux.javagrade.graders.Client</exec.mainClass>
+      </properties>
+      <build></build>
+    </profile>
+  </profiles>
+  
+  <dependencies>
+    <dependency>
+      <groupId>io.github.oliviercailloux</groupId>
+      <artifactId>jaris</artifactId>
+      <version>0.0.32-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.oliviercailloux</groupId>
+      <artifactId>jgradlib</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
 
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.4.14</version>
-			<scope>runtime</scope>
-		</dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.14</version>
+      <scope>runtime</scope>
+    </dependency>
 
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>compile</scope>
-		</dependency>
-	</dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
 </project>
